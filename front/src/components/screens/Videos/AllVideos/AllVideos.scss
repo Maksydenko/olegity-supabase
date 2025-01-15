@@ -1,0 +1,21 @@
+@import "Videos/Videos";
+
+.all-videos {
+  // .all-videos__container
+
+  &__container {
+    @media (max-width: $desktop) {
+      padding: 0;
+    }
+  }
+
+  // .all-videos__tabs
+
+  &__tabs {
+  }
+
+  // .all-videos__videos
+
+  &__videos {
+  }
+}

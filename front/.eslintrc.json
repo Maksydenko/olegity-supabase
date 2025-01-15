@@ -1,0 +1,54 @@
+{
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:@next/next/recommended",
+    "plugin:@tanstack/eslint-plugin-query/recommended"
+  ],
+  "plugins": ["simple-import-sort"],
+  "rules": {
+    "simple-import-sort/imports": [
+      1,
+      {
+        "groups": [
+          ["^react$", "^next", "^[a-z]", "^clsx$"],
+          ["^@"],
+          [
+            "^@/components/",
+            "^\\.\\.(?!/?$)",
+            "^\\.\\./?$",
+            "^\\./(?=.*/)(?!/?$)",
+            "^\\.(?!/?$)",
+            "^\\./?$"
+          ],
+          ["^@/providers", "\\.provider$"],
+          ["^@/contexts", "\\.context$"],
+          ["^@/stores", "\\.store$"],
+          ["^@/services", "\\.service$"],
+          [
+            "^@/hooks",
+            "^\\.\\./use[A-Z]",
+            "^\\./use[A-Z].*(?=.*/)",
+            "^\\./use[A-Z]"
+          ],
+          ["^@/utils", "\\.util$"],
+          ["^@/constants", "\\.const$"],
+          ["^@/configs", "\\.config$"],
+          ["^@/data", "\\.data$"],
+          ["^@/enums", "\\.enum$"],
+          ["^@/interfaces", "\\.interface$"],
+          ["^@/types", "\\.type$"],
+          ["^@/assets"],
+          ["^.*\\/dist\\/.*\\.s?css$"],
+          ["^.+\\.s?css$"]
+        ]
+      }
+    ]
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  }
+}
