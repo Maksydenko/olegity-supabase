@@ -36,6 +36,7 @@ const AllVideos: FC<AllVideosProps> = ({ className }) => {
         return response;
       },
     });
+  console.log(musicVideosData);
 
   const { data: animatedVideosData, isLoading: isAnimatedVideosDataLoading } =
     useQuery({
